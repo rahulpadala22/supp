@@ -84,8 +84,10 @@ function checkPassword() {
   const correctPassword = "080924";  // 🔴 CHANGE THIS
   const entered = document.getElementById("pw").value;
 
-  if (entered === correctPassword) {
-    window.location.href = "index.html";
+ if (entered === correctPassword) {
+  sessionStorage.setItem("allowed", "yes");
+  window.location.href = "index.html";
+}
   } else {
     alert("Wrong password 💔");
   }
@@ -94,3 +96,4 @@ function checkPassword() {
 
 </body>
 </html>
+
