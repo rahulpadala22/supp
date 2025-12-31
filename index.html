@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>New Year Surprise</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Full screen background image -->
+
+
+
+  <!-- Soft background -->
+  <div class="bg"></div>
+
+  <!-- Scrolling photo strip -->
+  <div class="photo-strip">
+    <div class="photo-track">
+      <img src="images/us1.jpg">
+      <img src="images/us2.jpg">
+      <img src="images/us3.jpg">
+      <img src="images/us4.jpg">
+      <img src="images/us5.jpg">
+
+      <!-- repeat for seamless scroll -->
+      <img src="images/us1.jpg">
+      <img src="images/us2.jpg">
+      <img src="images/us3.jpg">
+      <img src="images/us4.jpg">
+      <img src="images/us5.jpg">
+    </div>
+  </div>
+
+  <!-- Floating pookie -->
+  <!-- Pookie emojis in all corners -->
+<div class="pookie-emoji top-left">🧸</div>
+<div class="pookie-emoji top-right">🧸</div>
+<div class="pookie-emoji bottom-left">🧸</div>
+<div class="pookie-emoji bottom-right">🧸</div>
+
+
+  <!-- Main content -->
+  <div class="container">
+    <div id="countdown">Loading...</div>
+
+    <button id="surpriseBtn" disabled>
+      Another year with me 🫶🏻♾️
+    </button>
+
+    <div id="message">
+      🎆 Happy New Year 💕<br><br>
+      Every year feels softer,<br>
+      warmer, and more beautiful<br>
+      because of <b>you</b> 🧸💜
+    </div>
+  </div>
+
+  <canvas id="fireworks"></canvas>
+
+  <script src="script.js"></script>
+  
+
+</body>
+</html>

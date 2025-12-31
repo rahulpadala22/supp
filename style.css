@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&display=swap');
+
+/* FULL SCREEN BACKGROUND IMAGE */
+
+
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: 'Fredoka', sans-serif;
+  background: linear-gradient(
+    135deg,
+    #ffe4ef,
+    #ffd6e8,
+    #ffeaf4
+  );
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* SOFT BACKGROUND */
+.bg {
+  position: fixed;
+  inset: 0;
+  background-image:
+    url("images/toy1.jpg"),
+    url("images/toy2.jpg"),
+    url("images/toy3.jpg"),
+    url("images/memory1.jpg");
+  background-size: 160px;
+  background-repeat: repeat;
+  opacity: 0.08;
+  filter: blur(1px);
+  z-index: 0;
+}
+
+/* SCROLLING PHOTO STRIP */
+.photo-strip {
+  position: fixed;
+  top: 14%;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+  opacity: 0.55;
+}
+
+.photo-track {
+  display: flex;
+  width: fit-content;
+  animation: scrollPhotos 35s linear infinite;
+}
+
+.photo-track img {
+  width: 220px;          /* wider */
+  height: 420px;         /* THIS makes them tall top-to-bottom */
+  object-fit: cover;
+  margin: 0 16px;
+  border-radius: 30px;
+  box-shadow: 0 12px 30px rgba(255, 182, 193, 0.4);
+}
+
+
+@keyframes scrollPhotos {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0%); }
+}
+
+/* MAIN CARD */
+.container {
+  z-index: 2;
+  padding: 35px 30px;
+  max-width: 90%;
+  border-radius: 35px;
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(14px);
+  box-shadow:
+    0 25px 45px rgba(180, 120, 255, 0.25),
+    inset 0 0 20px rgba(255,255,255,0.6);
+}
+
+/* TIMER (NO GLOW, CUTE) */
+#countdown {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 3rem;
+  color: #7b4bb7;
+  margin-bottom: 35px;
+  letter-spacing: 1px;
+}
+
+/* PUFFY BUTTON */
+button {
+  padding: 18px 34px;
+  font-size: 1.25rem;
+  border-radius: 40px;
+  border: none;
+  cursor: not-allowed;
+  background: linear-gradient(
+    145deg,
+    #cfa9ff,
+    #ffb3d9
+  );
+  color: white;
+  font-family: 'Fredoka', sans-serif;
+  letter-spacing: 1px;
+  box-shadow:
+    0 15px 30px rgba(160, 90, 255, 0.35),
+    inset 0 3px 6px rgba(255,255,255,0.6);
+  transition: all 0.4s ease;
+}
+
+button.active {
+  cursor: pointer;
+  transform: scale(1.06);
+  box-shadow:
+    0 12px 25px rgba(160, 90, 255, 0.35);
+}
+
+/* MESSAGE */
+#message {
+  display: none;
+  margin-top: 30px;
+  font-size: 1.6rem;
+  color: #6a2d91;
+  line-height: 1.7;
+  animation: fadeIn 2.5s ease forwards;
+}
+
+/* POOKIE EMOJI */
+.pookie {
+  position: fixed;
+  right: 18px;
+  bottom: 22px;
+  font-size: 3.2rem;
+  opacity: 0.9;
+  z-index: 3;
+  animation: pookieFloat 3.5s ease-in-out infinite;
+}
+
+@keyframes pookieFloat {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* FIREWORKS */
+canvas {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* FADE */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+/* CORNER TOYS */
+.corner-toy {
+  position: fixed;
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 20px;
+  opacity: 0.85;
+  z-index: 1;
+  pointer-events: none;
+  box-shadow: 0 8px 20px rgba(255, 182, 193, 0.35);
+}
+
+/* Positions */
+.top-left {
+  top: 15px;
+  left: 15px;
+}
+
+.top-right {
+  top: 15px;
+  right: 15px;
+}
+
+.bottom-left {
+  bottom: 15px;
+  left: 15px;
+}
+
+.bottom-right {
+  bottom: 15px;
+  right: 15px;
+}
+
+/* POOKIE EMOJIS IN CORNERS */
+.pookie-emoji {
+  position: fixed;
+  font-size: 3rem;
+  opacity: 0.9;
+  z-index: 2;
+  pointer-events: none;
+  animation: pookieFloat 3.5s ease-in-out infinite;
+}
+
+/* Positions */
+.pookie-emoji.top-left {
+  top: 16px;
+  left: 16px;
+}
+
+.pookie-emoji.top-right {
+  top: 16px;
+  right: 16px;
+}
+
+.pookie-emoji.bottom-left {
+  bottom: 16px;
+  left: 16px;
+}
+
+.pookie-emoji.bottom-right {
+  bottom: 16px;
+  right: 16px;
+}
+
+/* Floating animation */
+@keyframes pookieFloat {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}

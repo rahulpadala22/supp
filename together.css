@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&display=swap');
+
+body {
+  min-height: 100vh;
+
+  /* Clear background image */
+  background:
+    linear-gradient(
+      rgba(255, 228, 239, 0.35),
+      rgba(255, 228, 239, 0.35)
+    ),
+    url("images/together-bg.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  font-family: 'Playfair Display', serif;
+  color: #4a2c3a;
+}
+
+
+
+
+/* BACKGROUND (MATCHES INDEX VIBE) */
+.bg {
+  position: fixed;
+  inset: 0;
+  background-size: 160px;
+  background-repeat: repeat;
+  opacity: 0.;
+  z-index: 0;
+}
+
+/* PAGE CONTENT */
+.page {
+  position: relative;
+  z-index: 1;
+  padding: 40px 20px 80px;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+  color: #6a2d91;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: #7a3cff;
+}
+
+/* SECTIONS */
+.sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: rgba(255,255,255,0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 26px;
+  padding: 25px;
+  box-shadow: 0 20px 40px rgba(180,120,255,0.25);
+}
+
+.card h2 {
+  margin-bottom: 15px;
+  color: #7b4bb7;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card li {
+  padding: 6px 0;
+  color: #444;
+}
+.final-note {
+  margin-top: 50px;
+  padding: 36px 32px;
+  border-radius: 26px;
+  position: relative;
+  z-index: 5;
+
+  /* Paper base */
+  background-color: #fff7f9;
+
+  /* Paper grain texture */
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(255,255,255,0.6),
+      rgba(255,255,255,0.6) 1px,
+      rgba(0,0,0,0.015) 2px,
+      rgba(0,0,0,0.015) 3px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255,255,255,0.6),
+      rgba(255,255,255,0.6) 1px,
+      rgba(0,0,0,0.01) 2px,
+      rgba(0,0,0,0.01) 3px
+    );
+
+  box-shadow:
+    0 20px 45px rgba(0,0,0,0.25),
+    inset 0 0 25px rgba(255,255,255,0.7);
+
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.final-note p {
+  font-size: 1.06rem;
+  line-height: 1.95;
+  color: #4a1f2e;
+}
