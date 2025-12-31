@@ -10,7 +10,11 @@
 <body>
     <!-- Full screen background image -->
 
-
+<script>
+  if (!sessionStorage.getItem("allowed")) {
+    window.location.href = "auth.html";
+  }
+</script>
 
   <!-- Soft background -->
   <div class="bg"></div>
@@ -64,3 +68,4 @@
 
 </body>
 </html>
+
