@@ -4,7 +4,7 @@ const msg = document.getElementById("message");
 
 const now = new Date();
 const targetYear = now.getFullYear() + 1;
-const newYearTime = new Date(`January 1, ${targetYear} 00:00:00`).getTime();
+const newYearTime = now.getTime() + 60 * 1000;
 
 
 // Countdown
@@ -76,3 +76,4 @@ function startFireworks() {
   setInterval(createFirework, 700);
   animate();
 }
+
